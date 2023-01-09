@@ -18,14 +18,14 @@ void solve() {
         getline(fp, line);
 
         map<int, int>mp;
-        while (getline(fp, line)) { //Ñ­»·¶ÁÈ¡Ã¿ÐÐÊý¾Ý
+        while (getline(fp, line)) { 
             vector<string> data_line;
             string number;
-            istringstream readstr(line); //stringÊý¾ÝÁ÷»¯
-            //½«Ò»ÐÐÊý¾Ý°´'£¬'·Ö¸î
-            for (int j = 0; j < 13; j++) { //¿É¸ù¾ÝÊý¾ÝµÄÊµ¼ÊÇé¿öÈ¡Ñ­»·»ñÈ¡
-                getline(readstr, number, ','); //Ñ­»·¶ÁÈ¡Êý¾Ý
-                data_line.push_back(number); //×Ö·û´®´«int
+            istringstream readstr(line); 
+            //slit every line by 'ï¼Œ'
+            for (int j = 0; j < 13; j++) { 
+                getline(readstr, number, ','); 
+                data_line.push_back(number); 
             }
 
             mp[atoi(data_line[0].c_str())]++;
